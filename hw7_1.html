@@ -1,0 +1,68 @@
+<!-- 
+    이름 : 김혜연
+    학번 : 202014089
+    과제명 : hw7_1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .ui-icon-my-icon:after {
+            background:url(buttonicon1.png);
+            background-size: 18px 18px;;
+        }
+        #box {
+            padding:50px 10px 10px 10px;
+        }
+    </style>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div data-role="page" id="page1">
+        <div data-role="header" data-position="fixed" data-fullscreen="true">
+            <h1>첫번째 페이지</h1>
+            <a href="#page2" class="ui-btn-right">다음</a>
+        </div>
+        <div id="box">
+                <button data-inline="true">버튼1</button>
+                <button data-icon="my-icon">버튼2</button>
+                <button data-icon="search" data-iconpos="right">버튼3</button>
+        </div>
+
+        <div data-role="footer" class="ui-bar" data-position="fixed" data-fullscreen="true">
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#">버튼4</a>
+                <a href=“#">버튼5</a>
+            </div>
+        </div>
+    </div>
+
+    <div data-role="page" id="page2">
+        <div data-role="header" data-fullscreen="true" data-position="fixed">
+            <h1>두번째 페이지</h1>
+        </div>
+
+        <div data-role="content" id="box">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="listdivider"> 박물관 종류</li>
+                <li><a href="#">자연사박물관</a></li>
+                <li><a href="#">공룡박물관<span class="ui-li-count">5</span></a></li>
+            </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" data-fullscreen="true">
+            <div data-role="navbar" >
+                <ul>
+                    <li><a data-icon="plus">추가</a></li>
+                    <li><a data-icon="minus">삭제</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
