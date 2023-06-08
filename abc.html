@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div data-role="content">
+        <p>content영역</p> <br />
+        <ul data-role="listview">
+            <li><a href="#">리스트1</a></li>
+            <li><a href="#">리스트2</a><a href="#">상세내용</a></li>
+            <li><a href="#">리스트3</a><a href="#">상세내용</a>
+                <<a href="#">가나다</a>
+            </li>
+            <li><a href="#">리스트4</a><a href="#">상세내용</a></li>
+        </ul>
+    </div>
+
+    <div data-role="page" id="page1" data-position="fixed">
+        <div data-role="header">
+            <h1>header 영역</h1>
+        </div>
+        <div data-role="content">
+            <p>기본형 페이지 </p>
+            <a href="#dialog1" data-role="button" data-rel="dialog">대화상자형 페이지1</a>
+            <a href="#dialog2" data-role="button">대화상자형 페이지2</a>
+        </div>
+        <div data-role="footer" data-position="fixed">
+            <h4>footer 영역</h4>
+        </div>
+    </div>
+    <div data-role="page" id="dialog1" data-position="fixed">
+        <div data-role="header">
+            <h1>dialog1</h1>
+        </div>
+        <div data-role="content">
+            <p> 대화상자형 페이지1 </p>
+            <a href="#page1" data-role="button">기본형 페이지1</a>
+            <a href="#dialog2" data-role="button">대화상자형 페이지2</a>
+        </div>
+    </div>
+    <div data-role="dialog" id="dialog2" data-position="fixed">
+        <div data-role="header">
+            <h1>dialog2</h1>
+        </div>
+        <div data-role="content">
+            <p> 대화상자형 페이지2 </p>
+            <a href="#page1" data-role="button">기본형 페이지1</a>
+            <a href="#dialog1" data-role="button">대화상자형 페이지1</a>
+        </div>
+    </div>
+</body>
+
+</html>
